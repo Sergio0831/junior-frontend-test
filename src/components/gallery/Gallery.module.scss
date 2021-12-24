@@ -1,0 +1,34 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.gallery {
+  display: $d-flex;
+  column-gap: $g-1 * 4;
+
+  &__selected {
+    width: $base-width;
+
+    img {
+      width: $base-width;
+      max-height: 51rem;
+      object-fit: cover;
+    }
+  }
+
+  &__figures {
+    @include centered-flex($flex-direction: column);
+    gap: $g-1 * 4;
+  }
+
+  &__figure {
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    cursor: pointer;
+    transition: opacity $transition;
+  }
+}
+
+.figure__selected {
+  opacity: 0.5;
+}

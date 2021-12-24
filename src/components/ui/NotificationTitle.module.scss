@@ -1,0 +1,17 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.title {
+  text-align: center;
+  margin-bottom: $m-1 * 2;
+
+  @include font(
+    $font-weight: $fw-semi-bold,
+    $font-size: $font-large,
+    $line-height: 1.11
+  );
+
+  &__modal {
+    font-size: $font-small;
+  }
+}

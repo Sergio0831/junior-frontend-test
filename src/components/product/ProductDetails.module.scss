@@ -1,0 +1,11 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.details {
+  display: grid;
+  grid-template-columns: minmax(30rem, 73rem) minmax(max-content, 1fr);
+  column-gap: 7vw;
+  margin-top: $m-1 * 8;
+  padding-right: 11%;
+  padding-top: $p-1 * 7;
+}

@@ -1,0 +1,75 @@
+// Colors
+$color-green: #5ece7b;
+$color-text: #1d1f22;
+$color-white: #fff;
+$color-grey: #43464e;
+$color-light-grey: #8d8f9a;
+$color-very-light-grey: #e5e5e5;
+$color-dark: #292929;
+
+$color-overlay: rgba(57, 55, 72, 0.22);
+
+$box-shadow: 0 4px 3.5rem rgba(168, 172, 176, 0.19);
+
+// Fonts
+$font-primary: "Raleway", sans-serif;
+$font-secondary: "Roboto", sans-serif;
+$font-tertiary: "Roboto Condensed", sans-serif;
+$font-quaternary: "Source Sans Pro", sans-serif;
+
+// Typography
+
+// Font Size
+$font-xs: 1.4rem;
+$font-base: 1.6rem;
+$font-small: 1.8rem;
+$font-medium: 2.4rem;
+$font-large: 3rem;
+$font-xlarge: $font-base * 2;
+$font-xxlarge: $font-xs * 3;
+
+// Font Weight
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+
+// Line Height
+$lh-small: 1;
+$lh-medium: 1.2;
+$lh-large: 1.6;
+
+// Flex
+$align-center: center;
+$justify-center: center;
+$justify-between: space-between;
+$justify-end: flex-end;
+$justify-start: start;
+
+// Display
+$d-flex: flex;
+$d-grid: grid;
+$d-block: block;
+
+// Spaces
+// Padding
+$p-1: 1rem;
+
+// Margin
+$m-1: 1rem;
+
+// Gap
+$g-1: 1rem;
+
+// Width Heigh
+$base-width: 100%;
+$base-height: 100%;
+
+// Transition
+$transition: 200ms ease;
+
+// Position
+$p-relative: relative;
+$p-absolute: absolute;
+$p-fixed: fixed;

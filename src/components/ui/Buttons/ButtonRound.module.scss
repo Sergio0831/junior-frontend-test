@@ -1,0 +1,10 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.round {
+  width: 5.2rem;
+  height: 5.2rem;
+  border: none;
+  border-radius: 50%;
+  background-color: $color-green;
+}

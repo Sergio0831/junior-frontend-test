@@ -1,0 +1,18 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.cart {
+  padding-top: $m-1 * 16;
+  padding-right: 11%;
+
+  &__title {
+    margin-bottom: $m-1 * 6;
+    text-transform: uppercase;
+
+    @include font(
+      $font-weight: $fw-bold,
+      $font-size: $font-xlarge,
+      $line-height: 1.25
+    );
+  }
+}

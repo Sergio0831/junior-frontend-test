@@ -1,0 +1,34 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.header {
+  border: none;
+  background-color: transparent;
+
+  &__title {
+    display: $d-flex;
+
+    span {
+      @include font(
+        $font-family: $font-primary,
+        $font-weight: $fw-medium,
+        $font-size: $font-small,
+        $line-height: $lh-large
+      );
+
+      margin-right: $m-1;
+      color: $color-text;
+    }
+  }
+}
+
+.icon {
+  align-self: $align-center;
+  transform: rotate(0deg);
+  transition: transform $transition;
+  color: $color-text;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}

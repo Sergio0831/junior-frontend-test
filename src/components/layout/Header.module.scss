@@ -1,0 +1,56 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.header {
+  height: 8rem;
+  background-color: $color-white;
+  z-index: 200;
+
+  @include fixed($top: 0, $left: 0, $right: 0);
+
+  &__wrapper {
+    @include centered-flex(
+      $justify-content: $justify-between,
+      $align-items: $align-center
+    );
+  }
+}
+
+.actions {
+  display: $d-flex;
+  column-gap: $g-1 * 2.2;
+}
+
+.cart {
+  padding-top: 0.2rem;
+  position: $p-relative;
+
+  @include centered-flex($align-items: $align-center);
+
+  svg {
+    fill: $color-grey;
+  }
+
+  &__btn {
+    background-color: transparent;
+    border: none;
+  }
+
+  &__qty {
+    width: 2rem;
+    height: 2rem;
+    padding: 2px;
+    border-radius: 50%;
+    color: $color-white;
+    background-color: $color-text;
+    text-align: $align-center;
+
+    @include font(
+      $font-weight: $fw-bold,
+      $font-size: $font-xs,
+      $line-height: 1.14
+    );
+
+    @include absolute($top: -5px, $right: -1.2rem);
+  }
+}

@@ -1,0 +1,26 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.slider {
+  position: $p-relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  width: $base-width;
+  height: $base-height;
+  position: $p-absolute;
+  opacity: 0;
+  transition: opacity 400ms ease;
+
+  img {
+    width: $base-width;
+    height: $base-height;
+    object-fit: contain;
+  }
+}
+
+.active {
+  opacity: 1;
+}

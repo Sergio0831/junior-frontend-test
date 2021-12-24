@@ -1,0 +1,10 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.products {
+  display: $d-grid;
+  grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+  column-gap: $g-1 * 4;
+  row-gap: $g-1 * 10;
+  padding-top: $p-1 * 9;
+}

@@ -1,0 +1,52 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.modal {
+  &__title {
+    margin-bottom: $m-1 * 2.5;
+
+    @include font(
+      $font-weight: $fw-bold,
+      $font-size: $font-base,
+      $line-height: $lh-medium
+    );
+
+    span {
+      @include font(
+        $font-weight: $fw-medium,
+        $font-size: inherit,
+        $line-height: inherit
+      );
+    }
+  }
+
+  &__total {
+    margin-bottom: $m-1 * 3.5;
+
+    @include centered-flex(
+      $align-items: $align-center,
+      $justify-content: $justify-between
+    );
+
+    h4 {
+      @include font(
+        $font-family: $font-secondary,
+        $font-weight: $fw-semi-bold,
+        $font-size: $font-base,
+        $line-height: 1.125
+      );
+    }
+
+    p {
+      @include font(
+        $font-weight: $fw-bold,
+        $font-size: $font-base,
+        $line-height: $lh-large
+      );
+    }
+  }
+
+  &__buttons {
+    @include centered-flex($justify-content: $justify-between);
+  }
+}

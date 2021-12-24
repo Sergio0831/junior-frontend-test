@@ -1,0 +1,88 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.product {
+  row-gap: $g-1 * 2.4;
+  padding: $p-1 * 1.6;
+  transition: box-shadow 200ms $transition;
+
+  @include relative;
+
+  @include centered-flex($flex-direction: column);
+
+  &:hover {
+    box-shadow: $box-shadow;
+
+    button {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  &__button {
+    @include absolute($bottom: 7.2rem, $right: 3.1rem);
+
+    transition: opacity 500ms ease, transform 500ms ease;
+    opacity: 0;
+    transform: scale(0.5);
+    z-index: 2;
+  }
+
+  svg {
+    fill: $color-white;
+  }
+
+  a {
+    @include absolute($bottom: 0, $right: 0, $top: 0, $left: 0);
+
+    z-index: 1;
+  }
+
+  &__image {
+    height: 33rem;
+
+    img {
+      width: $base-width;
+      height: $base-height;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    @include font(
+      $font-size: $font-small,
+      $font-weight: $fw-light,
+      $line-height: $lh-large
+    );
+  }
+
+  &__price {
+    @include font(
+      $font-size: $font-small,
+      $font-weight: $fw-medium,
+      $line-height: $lh-large
+    );
+  }
+}
+
+.outOfStock {
+  color: $color-light-grey;
+  pointer-events: none;
+
+  .product__image {
+    opacity: 0.5;
+  }
+
+  &Text {
+    @include absolute($top: 50%, $left: 50%);
+
+    @include font(
+      $font-size: $font-medium,
+      $font-weight: $fw-regular,
+      $line-height: $lh-large
+    );
+
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,53 @@
+@use "./variables" as *;
+
+// Typografy
+@mixin font(
+  $font-family: null,
+  $font-weight: null,
+  $font-size: null,
+  $line-height: null
+) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+// Layout
+@mixin centered-flex(
+  $flex-direction: null,
+  $justify-content: null,
+  $align-items: null
+) {
+  display: $d-flex;
+  flex-direction: $flex-direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+// Position
+@mixin position(
+  $position,
+  $top: null,
+  $right: null,
+  $bottom: null,
+  $left: null
+) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin absolute($args...) {
+  @include position($p-absolute, $args...);
+}
+
+@mixin relative($args...) {
+  @include position($p-relative, $args...);
+}
+
+@mixin fixed($args...) {
+  @include position($p-fixed, $args...);
+}

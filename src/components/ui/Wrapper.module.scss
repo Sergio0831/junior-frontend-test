@@ -1,0 +1,7 @@
+@use "../../styles/variables" as *;
+
+.wrapper {
+  width: $base-width;
+  max-width: 124rem;
+  margin: 0 auto;
+}

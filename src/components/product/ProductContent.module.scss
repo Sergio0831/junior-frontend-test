@@ -1,0 +1,61 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.content {
+  @include centered-flex($flex-direction: column);
+
+  &__brand {
+    @include font(
+      $font-size: $font-large,
+      $font-weight: $fw-semi-bold,
+      $line-height: 1.11
+    );
+
+    margin-bottom: $m-1 * 1.6;
+  }
+
+  &__name {
+    @include font(
+      $font-size: $font-large,
+      $font-weight: $fw-regular,
+      $line-height: 1.11
+    );
+
+    margin-bottom: $m-1 * 4;
+  }
+
+  &__description {
+    margin-top: $m-1 * 4;
+    width: $base-width;
+    max-width: 40rem;
+
+    @include font(
+      $font-family: $font-secondary,
+      $font-weight: $fw-medium,
+      $line-height: $lh-large
+    );
+  }
+}
+
+.price {
+  margin-bottom: $m-1 * 2;
+
+  &__name {
+    margin-bottom: $m-1;
+
+    @include font(
+      $font-family: $font-tertiary,
+      $font-size: $font-small,
+      $font-weight: $fw-bold,
+      $line-height: $lh-small
+    );
+  }
+
+  &__currency {
+    @include font(
+      $font-size: $font-medium,
+      $font-weight: $fw-bold,
+      $line-height: $lh-large
+    );
+  }
+}

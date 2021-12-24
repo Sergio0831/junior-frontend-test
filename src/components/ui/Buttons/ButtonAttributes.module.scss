@@ -1,0 +1,13 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.button {
+  position: $p-absolute;
+  appearance: none;
+
+  &:checked + label {
+    background-color: $color-text;
+    color: $color-white;
+    border: solid 2px $color-text;
+  }
+}

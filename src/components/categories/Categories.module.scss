@@ -1,0 +1,21 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.categories {
+  display: $d-flex;
+}
+
+.link {
+  @include font($line-height: $lh-medium, $font-weight: $fw-medium);
+
+  color: $color-text;
+  padding: $p-1 * 3 $p-1 * 1.6 $p-1 * 3;
+  border-bottom: 2px solid transparent;
+  transition: color $transition, border-color $transition;
+  text-transform: uppercase;
+
+  &.active {
+    color: $color-green;
+    border-color: $color-green;
+  }
+}

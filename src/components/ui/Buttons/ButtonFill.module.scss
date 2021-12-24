@@ -1,0 +1,29 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.fill {
+  background-color: $color-green;
+  padding: $p-1 * 1.6 0;
+  color: $color-white;
+  border: none;
+  text-transform: uppercase;
+  transition: background-color $transition;
+
+  @include font(
+    $font-size: $font-base,
+    $font-weight: $fw-medium,
+    $line-height: $lh-medium
+  );
+
+  &:hover {
+    background-color: darken($color-green, 10%);
+  }
+
+  &__small {
+    width: 14rem;
+    padding: $p-1 * 1.3 0;
+    border: 1px solid $color-green;
+
+    @include font($font-size: $font-xs, $font-weight: $fw-semi-bold);
+  }
+}

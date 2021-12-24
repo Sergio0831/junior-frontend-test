@@ -1,0 +1,28 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.value {
+  width: 6.3rem;
+  height: 4.5rem;
+  border: 1px solid $color-text;
+  background-color: transparent;
+  letter-spacing: 0.05em;
+  color: #292929;
+  display: $d-grid;
+  place-items: center;
+  cursor: pointer;
+  user-select: none;
+
+  @include font(
+    $font-family: $font-quaternary,
+    $font-size: $font-base,
+    $line-height: 1.125
+  );
+
+  &__small {
+    width: 4.5rem;
+    height: 2.4rem;
+
+    @include font($font-size: $font-xs, $line-height: $lh-large);
+  }
+}

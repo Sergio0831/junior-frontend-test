@@ -1,0 +1,47 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.attributes {
+  &__name {
+    @include font(
+      $font-family: $font-tertiary,
+      $font-size: $font-small,
+      $font-weight: $fw-bold,
+      $line-height: $lh-small
+    );
+  }
+
+  &__value {
+    display: $d-flex;
+    gap: $g-1 * 1.2;
+  }
+}
+
+.selected {
+  background-color: $color-text;
+  color: $color-white;
+}
+
+.productDetailsAttr {
+  margin-bottom: $m-1 * 3;
+
+  .attributes__name {
+    margin-bottom: 0.8rem;
+  }
+
+  .attributes__value {
+    gap: $g-1 * 1.2;
+    flex-wrap: wrap;
+    margin-bottom: $m-1;
+  }
+}
+
+.cartAttr {
+  display: $d-flex;
+  column-gap: $g-1 * 2;
+  flex-wrap: wrap;
+
+  .attributes__value {
+    gap: $g-1 * 1.2;
+  }
+}

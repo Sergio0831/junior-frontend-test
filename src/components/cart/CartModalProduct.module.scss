@@ -1,0 +1,89 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.product {
+  display: $d-grid;
+  grid-template-columns: 1fr auto auto;
+  margin-bottom: $m-1 * 4.5;
+
+  &__info {
+    justify-self: start;
+    align-self: flex-end;
+  }
+
+  &__image {
+    width: 10.5rem;
+    height: 13.7rem;
+
+    img {
+      width: $base-width;
+      height: $base-height;
+      object-fit: contain;
+    }
+  }
+
+  &__amount {
+    margin-right: $m-1;
+
+    @include centered-flex(
+      $flex-direction: column,
+      $justify-content: $justify-between
+    );
+  }
+
+  &__qty {
+    text-align: $align-center;
+
+    @include font(
+      $font-weight: $fw-medium,
+      $font-size: $font-base,
+      $line-height: $lh-large
+    );
+  }
+
+  &__attributes {
+    display: $d-flex;
+    column-gap: 0.8rem;
+  }
+
+  &__attribute {
+    width: 4.5rem;
+    height: 2.4rem;
+    border: 1px solid $color-text;
+    background-color: transparent;
+    letter-spacing: 0.05em;
+    color: #292929;
+    display: $d-grid;
+    place-items: center;
+    cursor: pointer;
+    user-select: none;
+
+    @include font(
+      $font-family: $font-quaternary,
+      $font-size: $font-xs,
+      $line-height: $lh-large
+    );
+  }
+}
+
+.info {
+  &__brand,
+  &__name {
+    @include font(
+      $font-weight: $fw-light,
+      $font-size: $font-base,
+      $line-height: $lh-large
+    );
+  }
+
+  &__price {
+    margin-top: 0.5rem;
+    margin-bottom: $m-1 * 2.7;
+
+    @include font(
+      $font-weight: $fw-medium,
+      $font-size: $font-base,
+      $line-height: $lh-large
+    );
+  }
+}

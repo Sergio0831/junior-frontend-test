@@ -1,0 +1,63 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.amount {
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: transparent;
+  border: 1px solid $color-text;
+  position: $p-relative;
+
+  &__plus {
+    &::before,
+    &::after {
+      content: "";
+      display: $d-block;
+      background-color: $color-text;
+      transform: translate(-50%, -50%);
+
+      @include absolute($top: 50%, $left: 50%);
+    }
+
+    &::before {
+      height: 1.5rem;
+      width: 1px;
+    }
+
+    &::after {
+      height: 1px;
+      width: 1.5rem;
+    }
+  }
+
+  &__minus {
+    &::after {
+      content: "";
+      display: $d-block;
+      background-color: $color-text;
+      transform: translate(-50%, -50%);
+
+      @include absolute($top: 50%, $left: 50%);
+    }
+
+    &::after {
+      height: 1px;
+      width: 1.5rem;
+    }
+  }
+
+  &__modal {
+    width: 2.4rem;
+    height: 2.4rem;
+
+    &::before {
+      height: 0.8rem;
+      width: 0.5px;
+    }
+
+    &::after {
+      width: 0.8rem;
+      height: 0.5px;
+    }
+  }
+}

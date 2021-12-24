@@ -1,0 +1,54 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.overlay {
+  @include fixed($top: 8rem, $left: 0);
+  width: $base-width;
+  height: $base-height;
+  background: rgba(57, 55, 72, 0.22);
+  z-index: -1;
+  visibility: hidden;
+  opacity: 0;
+  transition: all $transition;
+
+  &__container {
+    width: $base-width;
+    height: $base-height;
+    max-width: 124rem;
+    margin: 0 auto;
+    transition: all $transition;
+    overflow-y: auto !important;
+
+    @include centered-flex(
+      $justify-content: $justify-end,
+      $align-items: flex-start
+    );
+  }
+}
+
+.modal {
+  background-color: $color-white;
+  width: 100%;
+  height: auto;
+  padding: 0.8rem $p-1 * 1.6 $p-1 * 2;
+  max-width: 34rem;
+  overflow-y: auto !important;
+}
+
+.showModal {
+  visibility: visible;
+  opacity: 1;
+  z-index: 100;
+}
+
+.showModal2 {
+  visibility: visible;
+  opacity: 1;
+  z-index: 100;
+}
+
+.showModal3 {
+  visibility: visible;
+  opacity: 1;
+  z-index: 100;
+}

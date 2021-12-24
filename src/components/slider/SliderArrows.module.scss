@@ -1,0 +1,20 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.prevBtn,
+.nextBtn {
+  @include absolute($top: 50%);
+  @include centered-flex();
+
+  transform: translateY(-50%);
+  border: none;
+  background-color: transparent;
+}
+
+.prevBtn {
+  left: 1.5rem;
+}
+
+.nextBtn {
+  right: 1.5rem;
+}
